@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="TRM5VhGNBBY_f6IkeXY5E9D7X_wb8PDZKZV6ydPLL4w" />
+    <title>Uncharted</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Uncharted</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Подобрать страну</a></li>
+                    <li><a href="#">Sharing</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Панель фильтров -->
+    <section class="filters-panel">
+        <div class="container">
+            <div class="filters-grid">
+                <!-- Столбец Страны и города -->
+                <div class="filter-column">
+                    <h3 class="filter-title">Страны и города</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn country-btn" data-filter="country-france">Франция</button>
+                        <div class="cities-dropdown" id="cities-france">
+                            <label><input type="checkbox" data-city="paris"> Париж</label>
+                            <label><input type="checkbox" data-city="nice"> Ницца</label>
+                            <label><input type="checkbox" data-city="lyon"> Лион</label>
+                            <label><input type="checkbox" data-city="marseille"> Марсель</label>
+                        </div>
+
+                        <button class="filter-btn country-btn" data-filter="country-italy">Италия</button>
+                        <div class="cities-dropdown" id="cities-italy">
+                            <label><input type="checkbox" data-city="rome"> Рим</label>
+                            <label><input type="checkbox" data-city="milan"> Милан</label>
+                            <label><input type="checkbox" data-city="venice"> Венеция</label>
+                            <label><input type="checkbox" data-city="florence"> Флоренция</label>
+                        </div>
+
+                        <button class="filter-btn country-btn" data-filter="country-russia">Россия</button>
+                        <div class="cities-dropdown" id="cities-russia">
+                            <label><input type="checkbox" data-city="moscow"> Москва</label>
+                            <label><input type="checkbox" data-city="petersburg"> Санкт-Петербург</label>
+                            <label><input type="checkbox" data-city="sochi"> Сочи</label>
+                            <label><input type="checkbox" data-city="kazan"> Казань</label>
+                        </div>
+
+                        <button class="filter-btn country-btn" data-filter="country-usa">Америка</button>
+                        <div class="cities-dropdown" id="cities-usa">
+                            <label><input type="checkbox" data-city="new-york"> Нью-Йорк</label>
+                            <label><input type="checkbox" data-city="los-angeles"> Лос-Анджелес</label>
+                            <label><input type="checkbox" data-city="miami"> Майами</label>
+                            <label><input type="checkbox" data-city="las-vegas"> Лас-Вегас</label>
+                        </div>
+
+                        <button class="filter-btn country-btn" data-filter="country-china">Китай</button>
+                        <div class="cities-dropdown" id="cities-china">
+                            <label><input type="checkbox" data-city="beijing"> Пекин</label>
+                            <label><input type="checkbox" data-city="shanghai"> Шанхай</label>
+                            <label><input type="checkbox" data-city="guangzhou"> Гуанчжоу</label>
+                            <label><input type="checkbox" data-city="hong-kong"> Гонконг</label>
+                        </div>
+
+                        <button class="filter-btn country-btn" data-filter="country-japan">Япония</button>
+                        <div class="cities-dropdown" id="cities-japan">
+                            <label><input type="checkbox" data-city="tokyo"> Токио</label>
+                            <label><input type="checkbox" data-city="kyoto"> Киото</label>
+                            <label><input type="checkbox" data-city="osaka"> Осака</label>
+                            <label><input type="checkbox" data-city="sapporo"> Саппоро</label>
+                        </div>
+
+                        <button class="filter-btn country-btn" data-filter="country-georgia">Грузия</button>
+                        <div class="cities-dropdown" id="cities-georgia">
+                            <label><input type="checkbox" data-city="tbilisi"> Тбилиси</label>
+                            <label><input type="checkbox" data-city="batumi"> Батуми</label>
+                            <label><input type="checkbox" data-city="kutaisi"> Кутаиси</label>
+                            <label><input type="checkbox" data-city="mtskheta"> Мцхета</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Столбец Отдых -->
+                <div class="filter-column">
+                    <h3 class="filter-title">Тип отдыха</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn multi-select" data-filter="rest-active">Активный</button>
+                        <button class="filter-btn multi-select" data-filter="rest-moderate">Умеренный</button>
+                        <button class="filter-btn multi-select" data-filter="rest-cultural">Культурно-исторический</button>
+                        <button class="filter-btn multi-select" data-filter="rest-entertainment">Развлекательный</button>
+                    </div>
+                </div>
+
+                <!-- Столбец Ценовой сегмент -->
+                <div class="filter-column">
+                    <h3 class="filter-title">Ценовой сегмент</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn" data-filter="price-100">до 100к</button>
+                        <button class="filter-btn" data-filter="price-200">100-200к</button>
+                        <button class="filter-btn" data-filter="price-400">200-400к</button>
+                        <button class="filter-btn" data-filter="price-600">400-600к</button>
+                        <button class="filter-btn" data-filter="price-600plus">выше 600к</button>
+                    </div>
+                </div>
+
+                <!-- Столбец Часы -->
+                <div class="filter-column">
+                    <h3 class="filter-title">Продолжительность</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn" data-filter="hours-4">4 часа</button>
+                        <button class="filter-btn" data-filter="hours-6">6 часов</button>
+                        <button class="filter-btn" data-filter="hours-8">8 часов</button>
+                        <button class="filter-btn" data-filter="hours-10">10 часов</button>
+                    </div>
+                </div>
+
+                <!-- Столбец Дата путешествия -->
+                <div class="filter-column">
+                    <h3 class="filter-title">Дата путешествия</h3>
+                    <div class="date-inputs">
+                        <div class="date-input-group">
+                            <label for="start-date">С:</label>
+                            <input type="date" id="start-date" class="date-input">
+                        </div>
+                        <div class="date-input-group">
+                            <label for="end-date">По:</label>
+                            <input type="date" id="end-date" class="date-input">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-button-container">
+                <button class="search-btn" id="searchButton">Найти туры</button>
+            </div>
+        </div>
+    </section>
+
+        <!-- Основное содержание -->
+    <main class="main">
+        <div class="container">
+            <div class="results">
+                <h2>Выберите фильтры</h2>
+                <div class="results-placeholder">
+                    <p>Пожалуйста, выберите параметры поиска в фильтрах выше</p>
+                </div>
+                <!-- Карта с маршрутом по Осаке -->
+                <div class="map-container" style="display: none;">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m76!1m12!1m3!1d6563.110971075722!2d135.44326513244363!3d34.66592736921302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m61!3e2!4m5!1s0x6000e7155a4f1d9f%3A0xae5bcc7655d2b0dd!2sTsurutontan%20Soemoncho!3m2!1d34.6692104!2d135.50599789999998!4m5!1s0x6000e713818af9fd%3A0xb8bb1326b48ba590!2sDotonbori!3m2!1d34.6687234!2d135.5012971!4m5!1s0x6000e714b932b423%3A0xf53984b15c3e6f53!2sHozen-ji%20Temple!3m2!1d34.6679398!2d135.5024676!4m5!1s0x6000e6dba42a1cef%3A0xa135ef22a79f6eb2!2sOsaka%20Tenmangu%20Shrine!3m2!1d34.696057599999996!2d135.5126556!4m5!1s0x6000e0cd5c283afd%3A0xf01d07d5ca11e41!2sOsaka%20Castle!3m2!1d34.6872571!2d135.5258546!4m5!1s0x6000e741e541225d%3A0xac1d2c78be23c141!2sKuromon%20Market!3m2!1d34.665352899999995!2d135.50624059999998!4m5!1s0x6000e76077e042ff%3A0xe5cbcf56def44557!2zVHN1dGVua2FrdSDpgJrlpKnplqM!3m2!1d34.6524992!2d135.5063058!4m5!1s0x6000e77279bd5541%3A0x80c374197554ea9f!2sNamba%20Yasaka%20Jinja!3m2!1d34.6615592!2d135.4967039!4m5!1s0x6000e0d083d5e25d%3A0x3605fe25303252aa!2z0J_QsNGA0Log0YHRgtGD0LTQuNC4ICLQrtC90LjQstC10YDRgdCw0LsiINCyINCe0YHQsNC60LUsIDItY2jFjW1lLTEtMzMgU2FrdXJhamltYSwgS29ub2hhbmEgV2FyZCwgT3Nha2EsIDU1NC0wMDMxLCDQr9C_0L7QvdC40Y8!3m2!1d34.6656768!2d135.4323185!4m5!1s0x6000e890f0bc528b%3A0x1569d260eca7d151!2zSG90ZWwgVW5pdmVyc2FsIFBvcnQgVml0YSwgNi1jaMWNbWUt77yR55Wq77yR77yW5Y-3IFNoaW1heWEsIEtvbm9oYW5hIFdhcmQsIE9zYWthLCA1NTQtMDAyNCwg0K_Qv9C-0L3QuNGP!3m2!1d34.6670065!2d135.43880769999998!5e0!3m2!1sru!2sru!4v1764360140545!5m2!1sru!2sru"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                    <p class="map-description">
+                        <strong>Маршрут по Осаке:</strong><br>
+                        1. Hotel Universal Port Vita<br>
+                        Цена:  14200 ₽ 1 ночь (28500 йен)<br>
+                        Описание: <br>
+                        Hotel Universal Port Vita — это современный 4‑звёздочный отель у парка Universal Studios Japan (USJ) в районе Osaka Bay, ориентированный на семьи и гостей парка.<br><br>
+
+                        2. Universal Studios Japan<br>
+                        Цена: 4300 ₽ (8600 йен)<br>
+                        Описание: <br>
+                        Universal Studios Japan (USJ) — это крупный тематический парк развлечений в Осаке, открытый в 2001 году.<br><br>
+
+                        3. Namba Yasaka Jinja<br>
+                        Цена: Бесплатно<br>
+                        Описание: <br>
+                        Namba Yasaka Jinja — небольшой, но очень необычный синтоистский храм в Осаке. Главный объект для фото — гигантская сцена в форме львиной головы, которая, по поверью, «проглатывает» неудачи и злых духов, принося удачу.<br><br>
+
+                        4. Tsutenkaku<br>
+                        Цена: 600 ₽ (900 ен)<br>
+                        Описание:<br>
+                        Tsutenkaku — знаменитая башня в районе Синсэкай, один из символов Осаки. С её смотровых площадок открываются панорамные виды на город, а фотография с неоновой вывеской «Кинкичи» у основания — классический кадр из путешествия.<br><br>
+                        
+                        5. Kuromon Market<br>
+                        Цена: 500 ₽ (1000 йен)<br>
+                        Описание:<br>
+                        Kuromon Market — оживлённый крытый рынок, известный как «кухня Осаки». Идеальное место для красочных фотографий со свежими морепродуктами, гигантскими крабами, устрицами и другими деликатесами, которые здесь же можно попробовать.<br><br>
+                        
+                        6. Osaka Castle<br>
+                        Цена: 600 ₽ (1200 йен)<br>
+                        Описание:<br>
+                        Osaka Castle — величественный символ города, окружённый внушительными каменными стенами и рвами. Особенно живописен в сезон цветения сакуры.<br><br>
+                        
+                        7. Osaka Tenmangu Shrine<br>
+                        Цена: 200 ₽ (400 йен)<br>
+                        Описание:<br>
+                        Osaka Tennangu Shrine — одно из главных синтоистских святилищ Осаки, известное крупнейшим в Японии фестивалем Тэндзин-мацури. Фотогеничный красный мост Тайкобаси и атмосферные аллеи на его территории передают дух старинной Японии.<br><br>
+                        
+                        8. Hozen-ji Temple<br>
+                        Цена: 120 ₽ (240 йен)<br>
+                        Описание:<br>
+                        Hozen-ji Temple — крошечный, но атмосферный храм, спрятанный в переулке недалеко от Дотомбори. Главный объект для фото — покрытая густым мхом статуя Фудо Мё-о, которую посетители поливают водой для исполнения желаний.<br><br>
+                        
+                        9. Dotonbori<br>
+                        Цена: Бесплатно<br>
+                        Описание:<br>
+                        Dotonbori — самое яркое и оживлённое место Осаки, знаменитое неоновыми вывесками и гигантскими движущимися рекламными конструкциями. Обязательные фото: с «Бегущим человеком» Глико, крабом Kani Doraku и на фоне канала с его пешеходными мостами.<br><br>
+                        
+                        10. Tsurutontan Soemoncho<br>
+                        Цена: 1000 ₽ (2000 йен)
+                        Описание:<br>
+                        Tsurutontan Soemoncho — популярный ресторан удона, известный своими огромными порциями лапши в оригинальных бульонах.
+                    </p>
+                    <div class="map-link-container" style="display: none;">
+                        <a href="https://maps.app.goo.gl/Amq9T2tzwpMMRhgP9" target="_blank" class="map-link-btn">
+                            Ссылка на Google-карту <img src="google-maps.png" class="google-maps-logo">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>О компании</h3>
+                    <p>Мы продумаем маршрут путешествия за вас, сделав его незабываемым</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Email: info@example.com</p>
+                    <p>Телефон: +7 (123) 456-78-90</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Социальные сети</h3>
+                    <div class="social-links">
+                        <a href="#">VK</a>
+                        <a href="#">Telegram</a>
+                        <a href="#">YouTube</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Uncharted</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка подписки (плавающая) -->
+    <button class="subscription-btn" id="subscriptionBtn">
+        Подписка
+    </button>
+
+    <!-- Модальное окно подписки -->
+    <div class="modal-overlay" id="subscriptionModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <h2>Выберите подписку</h2>
+            <div class="subscription-options">
+                <div class="subscription-option">
+                    <input type="radio" id="month1" name="subscription" value="1000" class="subscription-radio">
+                    <label for="month1" class="subscription-label">
+                        <span class="subscription-duration">1 месяц</span>
+                        <span class="subscription-price">3 000 ₽</span>
+                    </label>
+                </div>
+                <div class="subscription-option">
+                    <input type="radio" id="month3" name="subscription" value="2250" class="subscription-radio">
+                    <label for="month3" class="subscription-label">
+                        <span class="subscription-duration">3 месяца</span>
+                        <span class="subscription-price">7 500 ₽</span>
+                        <span class="subscription-save">Экономия 1500 ₽</span>
+                    </label>
+                </div>
+                <div class="subscription-option">
+                    <input type="radio" id="month6" name="subscription" value="4950" class="subscription-radio">
+                    <label for="month6" class="subscription-label">
+                        <span class="subscription-duration">6 месяцев</span>
+                        <span class="subscription-price">15 500 ₽</span>
+                        <span class="subscription-save">Экономия 2 500 ₽</span>
+                    </label>
+                </div>
+                <div class="subscription-option">
+                    <input type="radio" id="month12" name="subscription" value="9300" class="subscription-radio">
+                    <label for="month12" class="subscription-label">
+                        <span class="subscription-duration">12 месяцев</span>
+                        <span class="subscription-price">25 000 ₽</span>
+                        <span class="subscription-save">Экономия 11 000 ₽</span>
+                    </label>
+                </div>
+            </div>
+            <button class="purchase-btn" id="purchaseBtn">Приобрести подписку</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
